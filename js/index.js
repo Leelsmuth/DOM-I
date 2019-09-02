@@ -58,6 +58,22 @@ multipleSelections[3].textContent = siteContent["nav"]["nav-item-4"]
 multipleSelections[4].textContent = siteContent["nav"]["nav-item-5"]
 multipleSelections[5].textContent = siteContent["nav"]["nav-item-6"]
 
+multipleSelections.forEach(function(change){
+  change.style.color = 'green'
+  });
+
+let addedProduct = document.createElement("a");
+addedProduct.textContent = 'Extra';
+
+let prependAdd = document.createElement("a");
+prependAdd.textContent = 'Before';
+
+let navBar = document.querySelector('nav')
+navBar.appendChild(addedProduct);
+navBar.prepend(prependAdd);
+
+
+
 let buttonTag = document.querySelector('button');
 buttonTag.textContent = siteContent["cta"]["button"]
 
@@ -87,3 +103,4 @@ contactTags[7].textContent = siteContent["contact"]["email"];
 
 let footerTag = document.querySelector("footer");
 footerTag.textContent = siteContent["footer"]["copyright"]
+
