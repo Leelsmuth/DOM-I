@@ -78,7 +78,9 @@ let buttonTag = document.querySelector('button');
 buttonTag.textContent = siteContent["cta"]["button"]
 
 let buttonText = document.querySelector('h1');
-buttonText.textContent = siteContent['cta']['h1']
+buttonText.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>');
+
+
 
 let textContentDiv = document.querySelectorAll(".text-content");
 // console.log(textContentDiv);
