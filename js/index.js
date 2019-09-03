@@ -99,7 +99,8 @@ let contactSection = document.querySelector('.contact');
 contactSection.querySelector('h4').textContent = siteContent["contact"]["contact-h4"];
 
 let contactTags = document.querySelectorAll('p');
-contactTags[5].textContent = siteContent["contact"]["address"];
+// contactTags[5].textContent = siteContent["contact"]["address"];
+contactTags[5].innerHTML = siteContent["contact"]["address"].split('Street').join('Street <br>');
 contactTags[6].textContent = siteContent["contact"]["phone"];
 contactTags[7].textContent = siteContent["contact"]["email"];
 
